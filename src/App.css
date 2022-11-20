@@ -5,7 +5,6 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-image: url("./ed-background.png");
   background-size: cover;
 }
 
@@ -16,7 +15,6 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .big-title {
@@ -32,8 +30,13 @@
 }
 
 .song-input {
+  margin-top: 50px;
   width: 700px;
-  float: left
+  float: left;
+  padding: 15px;
+  background-color: black;
+  border-radius: 1%;
+  margin-right: 60px;
 }
 
 textarea {
@@ -62,6 +65,7 @@ textarea {
 
 
 .ed-image {
+  margin-top: 50px;
   float: left;
   margin-left: 50px;
 }
