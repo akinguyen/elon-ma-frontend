@@ -20,7 +20,7 @@ We learned how to use the FFmpeg software, Cloud's text-to-speech API, Cockroach
 Something we really wanted to work on was the cohesion of sounds  and some more similarity word embeddings to make the output/generated audio of Ed singing more natural and smooth. Perhaps Ed will get a duo.... Maybe Adele, Harry Styles?
 
 # Our Backend
-Here is a link to our backend repo https://github.com/adityabilawar/RU-Hacks-BackEnd-2022
+Here is a link to our backend repo https://github.com/adityabilawar/trojan-hacks-BackEnd-2022
 We build our backend using express.js, node.js, cockroachDB, GCP text-to-speech API, and GCP cloud storate for buckets.
 
 # Getting Started with Create React App

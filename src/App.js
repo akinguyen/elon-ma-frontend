@@ -1,5 +1,5 @@
 import "./App.css";
-import edSing from "./ed-sing.gif";
+import edSing from "./ed-sheeran.gif";
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import Modal from "react-modal";
@@ -53,13 +53,6 @@ function App() {
       <div class="background" />
       <div class="black-opacity d-flex justify-content-center align-items-center">
         <div class="">
-          {/** HEADER */}
-          <div class="header">
-            <div class="big-title">Help Ed Sing 🎵</div>
-            <div class="small-title mt-2 mb-5">
-              Ed Sheeran will sing anything
-            </div>
-          </div>
           {/** MIDDLE */}
           <div class="middle">
             {/** SONG INPUT */}
@@ -82,14 +75,17 @@ function App() {
                       videoRef.current.pause();
 
                       axios
-                        .post("https://ru-hack-backend.herokuapp.com/sound", {
-                          userInput: userInput
-                            .replace("'", "_")
-                            .replace(/\n/g, " "),
-                        })
+                        .post(
+                          "https://trojan-hack-backend.herokuapp.com/sound",
+                          {
+                            userInput: userInput
+                              .replace("'", "_")
+                              .replace(/\n/g, " "),
+                          }
+                        )
                         .then(function () {
                           axios({
-                            url: "https://ru-hack-backend.herokuapp.com/download", //your url
+                            url: "https://trojan-hack-backend.herokuapp.com/download", //your url
                             method: "GET",
                             responseType: "blob", // important
                           }).then((res) => {
@@ -104,14 +100,14 @@ function App() {
                         });
                     }}
                   >
-                    Generate
+                    {disabled ? "Loading" : "Generate"}
                   </button>
                 ) : (
                   <div>
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://ru-hack-backend.herokuapp.com/download"
+                      href="https://trojan-hack-backend.herokuapp.com/download"
                       class="btn btn-danger blue-color-btn mt-3"
                       onClick={() => {
                         setGenerated(true);
@@ -147,7 +143,7 @@ function App() {
             </div>
             {/** ED IMAGE*/}
             <div class="ed-image">
-              <img src={edSing} alt="ed-sing" width={320} />
+              <img src={edSing} alt="ed-sing" width="150%" height="150%" />
             </div>
           </div>
           <video ref={videoRef} class="user-video" src={videoUrl} autoPlay />
@@ -175,7 +171,7 @@ function App() {
               e.preventDefault();
 
               axios
-                .post("https://ru-hack-backend.herokuapp.com/share_friend", {
+                .post("https://hack-backend.herokuapp.com/share_friend", {
                   email: friendEmail,
                 })
                 .then((res) => {
