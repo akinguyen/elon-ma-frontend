@@ -1,0 +1,77 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-image: url("./ed-background.png");
+  background-size: cover;
+}
+
+.black-opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.big-title {
+  color: #1bb8d8;
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+}
+
+.small-title {
+  color: #1bb8d8;
+  font-family: "Bellota Text", cursive;
+  font-size: 25px;
+}
+
+.song-input {
+  width: 700px;
+  float: left
+}
+
+textarea {
+  height: 380px !important;
+  font-size: 25px !important;
+  font-family: "Inter", sans-serif;
+  padding: 10px !important;
+}
+
+.orange-color-btn {
+  background: #EA5837 !important;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  border: 0;
+
+}
+
+.blue-color-btn {
+  background: #1bb8d8 !important;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  border: 0;
+}
+
+
+.ed-image {
+  float: left;
+  margin-left: 50px;
+}
+
+.user-video{
+  position: absolute;
+  z-index: -1;
+  width: 0;
+}
+
+.send-btn {
+  margin-left: 10px
+}
